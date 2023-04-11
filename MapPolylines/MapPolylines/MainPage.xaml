@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
+             x:Class="MapPolylines.MainPage">
+
+    <ContentPage.Content>
+        <map:SfMaps>
+            <map:SfMaps.Layer>
+                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
+                                   ShapeStroke="DarkGray">
+                    <map:MapShapeLayer.Sublayers>
+                        <map:MapPolylineLayer AnimationDuration="3000"
+                                              AnimationEasing="{x:Static Easing.SinInOut}">
+                            <map:MapPolylineLayer.Polylines>
+                                <map:MapPolyline>
+                                    <map:MapPolyline.Points>
+                                        <map:MapLatLng Latitude="13.0827"
+                                                       Longitude="80.2707" />
+                                        <map:MapLatLng Latitude="13.1746"
+                                                       Longitude="79.6117" />
+                                        <map:MapLatLng Latitude="13.6373"
+                                                       Longitude="79.5037" />
+                                        <map:MapLatLng Latitude="14.4673"
+                                                       Longitude="78.8242" />
+                                        <map:MapLatLng Latitude="14.9091"
+                                                       Longitude="78.0092" />
+                                        <map:MapLatLng Latitude="16.2160"
+                                                       Longitude="77.3566" />
+                                        <map:MapLatLng Latitude="17.1557"
+                                                       Longitude="76.8697" />
+                                        <map:MapLatLng Latitude="18.0975"
+                                                       Longitude="75.4249" />
+                                        <map:MapLatLng Latitude="18.5204"
+                                                       Longitude="73.8567" />
+                                        <map:MapLatLng Latitude="19.0760"
+                                                       Longitude="72.8777" />
+                                    </map:MapPolyline.Points>
+                                </map:MapPolyline>
+                            </map:MapPolylineLayer.Polylines>
+                        </map:MapPolylineLayer>
+                    </map:MapShapeLayer.Sublayers>
+                </map:MapShapeLayer>
+            </map:SfMaps.Layer>
+        </map:SfMaps>
+    </ContentPage.Content>
+
+</ContentPage>
